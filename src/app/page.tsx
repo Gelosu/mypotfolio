@@ -51,7 +51,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="text-center py-20 px-6 max-w-4xl mx-auto" id="home">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-purple-300">
-          Hi, I'm Gelosu316 — Developer & Creative Technologist
+          Hi, I'm Gelosu — Developer & Creative Technologist
         </h1>
         <h2 className="text-xl md:text-2xl mb-6 text-gray-300">
           Building tools to empower communities, boost productivity, and bring joy through games.
