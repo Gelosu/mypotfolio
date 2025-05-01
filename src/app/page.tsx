@@ -1,21 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
+import Hero from "@/app/functions/intro";
 import AboutMe from "@/app/homepages/aboutme";
 import Projects from "@/app/homepages/projects";
 import Programs from "@/app/homepages/programl";
 import Link from "next/link";
 import ScrollButton from "@/app/functions/scrollup";
-import { Menu, X } from "lucide-react"; // Lucide icons
+import { Menu, X } from "lucide-react"; 
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
 
   return (
     <div className="bg-gray-950 text-white min-h-screen">
       <Head>
-        <title> GELOSU PORTFOLIO </title>
+        <title>MY GAME WEBSITE</title>
       </Head>
 
       <ScrollButton />
@@ -50,15 +54,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="text-center py-20 px-6 max-w-4xl mx-auto" id="home">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-purple-300">
-          Hi, I'm Gelosu — Developer & Creative Technologist
-        </h1>
-        <h2 className="text-xl md:text-2xl mb-6 text-gray-300">
-          Building tools to empower communities, boost productivity, and bring joy through games.
-        </h2>
-        <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-          Welcome to my digital playground — explore my projects across web, desktop, and game development.
-        </p>
+        <Hero/>
       </section>
 
       {/* Sections */}
@@ -67,7 +63,7 @@ export default function Home() {
       <section className="px-6" id="programs"><Programs /></section>
 
       {/* Contact Section */}
-      <section id="contact" className="px-4 py-10 bg-gray-800">
+      <section id="contact" className="px-4 py-4 bg-gray-800">
         <h2 className="text-3xl text-center text-white mb-8">Contact ME via</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center text-gray-400">
           <div>
@@ -76,15 +72,15 @@ export default function Home() {
           </div>
           <div>
             🔗 Facebook:<br />
-            <a href="https://facebook.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:underline">facebook.com/yourusername</a>
+            <a href="https://facebook.com/angelo.dumaop" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:underline">Angelo Dumaop</a>
           </div>
           <div>
             💬 Discord:<br />
-            <span className="text-purple-300">YourDiscord#1234</span>
+            <span className="text-purple-300">angelo_316</span>
           </div>
           <div>
             💼 LinkedIn:<br />
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:underline">linkedin.com/in/yourprofile</a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:underline">MY LINKEDIN</a>
           </div>
         </div>
       </section>
